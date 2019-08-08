@@ -44,11 +44,11 @@ export default Ember.Route.extend({
   },
   autoChangeChartData: task(function * () {
     let notify = this.get('notify');
-    yield timeout(1000);
+    yield timeout(2000);
     try {
       notify.warning('Starting Automatic Process...');
       while (true) {
-        yield timeout(2500);
+        yield timeout(5000);
 
         let dataIndex = this.controller.get('dataIndex');
         if (dataIndex < this.controller.get('model').length - 1) {
